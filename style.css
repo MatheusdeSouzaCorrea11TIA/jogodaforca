@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  :root {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background: #263128;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+    color: #d3f1d5;
+    margin-bottom: 4.5rem;
+  }
+  
+  .game {
+    background: #7fc484;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 40rem;
+    width: 40rem;
+    border-radius: 1rem;
+  }
+  
+  .game p {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .game label {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+  .game input {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+  }
+  
+  .game button {
+    padding: 0.75rem 2rem;
+    border: none;
+    background-color: #3b724e;
+    color: white;
+    border-radius: 1rem;
+  }
+  
+  .game button:hover {
+    background-color: #22472f;
+    cursor: pointer;
+  }
+  
+  .game span {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+  #replay {
+    background-color: #143a2d;
+    margin-top: 3rem;
+  }
+  
+  #replay:hover {
+    background-color: #3a5e1d;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .forca-layout {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+  }
+  
+  .base {
+    border-bottom: 5px solid white;
+    width: 15rem;
+  }
+  
+  .coisa {
+    display: flex;
+  }
+  
+  .pilar {
+    border-left: 5px solid white;
+    border-top: 5px solid white;
+    height: 30rem;
+    width: 10rem;
+    margin-left: auto;
+  }
+  
+  .corda {
+    margin-left: -1rem;
+    border-right: 5px solid white;
+    height: 3rem;
+    width: 1rem;
+  }
+  
+  .boneco {
+    margin-top: 3rem;
+    margin-left: -1.75rem;
+    width: 5rem;
+    height: 15rem;
+  }
+  
+  .cabeca {
+    position: relative;
+    left: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    border: 5px solid white;
+    border-radius: 50%;
+  }
+  
+  .tronco {
+    position: relative;
+    width: 0;
+    height: 5rem;
+    left: 2.25rem;
+    border: 3.5px solid white;
+  }
+  
+  .braco1 {
+    position: relative;
+    border-top: 5px solid white;
+    right: 0.5rem;
+    top: -3rem;
+    width: 4rem;
+    transform: rotate(-60deg);
+  }
+  
+  .braco2 {
+    position: relative;
+    border-top: 5px solid white;
+    left: 1.5rem;
+    top: -3.75rem;
+    width: 4rem;
+    transform: rotate(60deg);
+  }
+  
+  .perna1 {
+    position: relative;
+    border-top: 5px solid white;
+    transform: rotate(-60deg);
+    right: 1.2rem;
+    top: 0.5rem;
+  }
+  
+  .perna2 {
+    position: relative;
+    border-top: 5px solid white;
+    transform: rotate(60deg);
+    left: 1.25rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
