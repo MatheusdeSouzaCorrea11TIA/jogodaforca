@@ -110,7 +110,7 @@ function selecionarPalavra() {
   
   while (!palavraValida) {
     palavraPraAdivinhar = prompt("Digite uma palavra")
-    palavraPraAdivinhar.toLowerCase()
+    palavraPraAdivinhar = palavraPraAdivinhar.toLowerCase()
 
     if (palavraValida !== null) {
           if (palavraPraAdivinhar.split("").length < 2) {
