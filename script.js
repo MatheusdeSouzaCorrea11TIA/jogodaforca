@@ -35,7 +35,6 @@ submit.addEventListener("click", () => {
       if (palavra == PAcortada[i]) {
         wordHolder[i] = palavra.trim()
         rightLetter = true
-        break
       }
     }
 
