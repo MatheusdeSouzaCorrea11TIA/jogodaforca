@@ -11,7 +11,7 @@ let palavraValida = false
 let palavraPraAdivinhar = null
 
 submit.addEventListener("click", () => {
-  let palavra = input.value
+  let palavra = input.value.toLowerCase()
   let rightLetter = false
   palavra = palavra.trim().replace(/\\s+/g, '')
 
@@ -110,6 +110,7 @@ function selecionarPalavra() {
   
   while (!palavraValida) {
     palavraPraAdivinhar = prompt("Digite uma palavra")
+    palavraPraAdivinhar.toLowerCase()
 
     if (palavraValida !== null) {
           if (palavraPraAdivinhar.split("").length < 2) {
