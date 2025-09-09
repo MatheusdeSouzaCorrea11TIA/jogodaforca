@@ -10,13 +10,15 @@ let wordHolder = []
 let palavraValida = false
 let palavraPraAdivinhar = null
 
+let regex = /^[A-Za-z\s]+$/
+
 submit.addEventListener("click", () => {
   let palavra = input.value.toLowerCase()
   let rightLetter = false
   palavra = palavra.trim().replace(/\\s+/g, '')
   input.value = ""
 
-  if (!/^[a-zA-Z]+$/.test(palavra)) {
+  if (!regex.test(palavra)) {
     alert("Digite apenas letras!")
     return
   }
@@ -64,8 +66,13 @@ function montarPalavra(word) {
   word = word.split("")
   if (wordHolder.length <= 0) {
     for (let i = 0; i < word.length; i++) {
-      wordHolder[i] = "_"
+      console.log(word[i])
+      if (/\s+/g.test(word[i]))
+        wordHolder[i] = " "
+      else
+        wordHolder[i] = "_"
     }
+    
   }
 
   let vidaTexto = []
@@ -117,7 +124,7 @@ function selecionarPalavra() {
     if (palavraValida !== null) {
           if (palavraPraAdivinhar.split("").length < 2) {
           alert("Digite uma palavra maior!")
-        } else if (!/^[A-Za-z]+$/.test(palavraPraAdivinhar)) {
+        } else if (!regex.test(palavraPraAdivinhar)) {
           alert("Digite uma palavra apenas com letras")
         } else {
           montarPalavra(palavraPraAdivinhar)
