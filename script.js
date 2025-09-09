@@ -14,6 +14,7 @@ submit.addEventListener("click", () => {
   let palavra = input.value.toLowerCase()
   let rightLetter = false
   palavra = palavra.trim().replace(/\\s+/g, '')
+  input.value = ""
 
   if (!/^[a-zA-Z]+$/.test(palavra)) {
     alert("Digite apenas letras!")
