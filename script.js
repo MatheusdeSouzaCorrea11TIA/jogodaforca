@@ -107,6 +107,7 @@ function selecionarPalavra() {
   lifeCount = 6
   letters = []
   wordHolder = []
+  input.value = ""
   
   while (!palavraValida) {
     palavraPraAdivinhar = prompt("Digite uma palavra")
@@ -124,6 +125,10 @@ function selecionarPalavra() {
     } else {
       alert("Digite uma palavra")
     }
+  }
+
+  for (let i = 0; i < boneco.length; i++) {
+    boneco[i].classList.add("hidden")
   }
 }
 

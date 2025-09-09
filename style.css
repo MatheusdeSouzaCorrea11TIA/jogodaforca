@@ -7,10 +7,14 @@
   
   :root {
     font-size: 62.5%;
+    --bg: #18181a;
+    --green: #206e47;
+    --hover-green: #7edaaf;
+    --dark-green: #43da78;
   }
   
   body {
-    background: #263128;
+    background: var(--bg);
     height: 100svh;
     display: flex;
     flex-direction: column;
@@ -25,15 +29,17 @@
   }
   
   .game {
-    background: #7fc484;
+    background: var(--green);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     height: 40rem;
-    width: 40rem;
+    min-width: 40rem;
     border-radius: 1rem;
+    padding: 2rem;
   }
   
   .game p {
@@ -56,13 +62,13 @@
   .game button {
     padding: 0.75rem 2rem;
     border: none;
-    background-color: #3b724e;
-    color: white;
+    background-color: var(--dark-green);
+    color: black;
     border-radius: 1rem;
   }
   
   .game button:hover {
-    background-color: #22472f;
+    background-color: var(--hover-green);
     cursor: pointer;
   }
   
@@ -72,12 +78,12 @@
   }
   
   #replay {
-    background-color: #143a2d;
+    background-color: var(--dark-green);
     margin-top: 3rem;
   }
   
   #replay:hover {
-    background-color: #3a5e1d;
+    background-color: var(--hover-green);
   }
   
   .container {
